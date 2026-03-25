@@ -1,9 +1,4 @@
-# BiosGuard 🔒
-
-[![C](https://img.shields.io/badge/language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![UEFI](https://img.shields.io/badge/platform-UEFI-green.svg)](https://uefi.org/)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-[![Visual Studio](https://img.shields.io/badge/IDE-Visual%20Studio-purple.svg)](https://visualstudio.microsoft.com/)
+# BiosGuard 
 
 > **UEFI Firmware Integrity Verification Tool** — A pre-boot security solution for detecting unauthorized BIOS modifications using SHA-256 cryptographic hashing.
 
@@ -11,22 +6,22 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 **BiosGuard** is an EFI application that executes at the firmware level (before OS boot) to verify the integrity of BIOS firmware components. It provides cryptographic assurance that critical firmware volumes haven't been tampered with.
 
 ### Key Features
 
-- 🔐 **Cryptographic Verification** — SHA-256 hashing of firmware volumes
-- 🚀 **Pre-Boot Execution** — Runs at UEFI level, independent of OS
-- 🗂️ **Firmware Volume Parsing** — Locates and analyzes UEFI PI volumes by GUID
-- 📊 **Hash Database** — Embedded whitelist of known-good firmware hashes
-- 📝 **Audit Logging** — Generates integrity reports and unknown hash records
-- ⚡ **Lightweight** — Optimized for minimal memory footprint
+- **Cryptographic Verification** — SHA-256 hashing of firmware volumes
+- **Pre-Boot Execution** — Runs at UEFI level, independent of OS
+- **Firmware Volume Parsing** — Locates and analyzes UEFI PI volumes by GUID
+- **Hash Database** — Embedded whitelist of known-good firmware hashes
+- **Audit Logging** — Generates integrity reports and unknown hash records
+- **Lightweight** — Optimized for minimal memory footprint
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -53,7 +48,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed technical documentation.
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 ### Build Requirements
 
@@ -71,7 +66,7 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed technical documentation.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone Repository
 
@@ -115,7 +110,7 @@ BiosGuard.efi
 
 ---
 
-## 📊 Example Output
+## Example Output
 
 ```
 BIOS Size: 16777216 bytes
@@ -162,7 +157,7 @@ BiosGuard/
 
 ---
 
-## 🔧 Updating Hash Database
+## Updating Hash Database
 
 After first run, new firmware hashes are appended to `hash.bin`. To embed them:
 
@@ -175,9 +170,9 @@ Rebuild the project to include updated hashes.
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
-> ⚠️ **Warning**: This tool operates at Ring -1 privilege level.
+> **Warning**: This tool operates at Ring -1 privilege level.
 
 - **Not a silver bullet** — Protects against firmware modifications but not against hardware attacks
 - **Secure Boot** — Requires unsigned EFI execution; sign with your own keys for production
@@ -195,7 +190,7 @@ Rebuild the project to include updated hashes.
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] TPM 2.0 integration for measured boot
 - [ ] Network attestation protocol
@@ -206,7 +201,7 @@ Rebuild the project to include updated hashes.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -219,28 +214,3 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for gu
 - 100 character line limit
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
-
----
-
-## 🙏 Acknowledgments
-
-- [Tianocore EDK2](https://github.com/tianocore/edk2) — UFI development framework
-- [NIST FIPS 180-4](https://csrc.nist.gov/publications/detail/fips/180/4/final) — SHA-256 specification
-- [UEFI Specification](https://uefi.org/specifications) — Firmware interface standard
-
----
-
-## 📞 Support
-
-- Create a [GitHub Issue](https://github.com/username/BiosGuard/issues) for bug reports
-- Start a [Discussion](https://github.com/username/BiosGuard/discussions) for questions
-
----
-
-<p align="center">
-  <sub>Built with ❤️ for firmware security research</sub>
-</p>
