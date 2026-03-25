@@ -1,0 +1,40 @@
+# Build artifacts
+*.obj
+*.pdb
+*.exe
+*.efi
+*.iobj
+*.ipdb
+*.log
+*.tlog
+*.lastbuildstate
+*.recipe
+*.FileListAbsolute.txt
+*.Build.CppClean.log
+x64/
+Debug/
+Release/
+bin/
+build/
+
+# Visual Studio
+.vs/
+*.user
+*.filters
+*.suo
+*.sdf
+*.opensdf
+
+# Binary files
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
