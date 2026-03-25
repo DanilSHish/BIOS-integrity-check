@@ -129,7 +129,7 @@ SHA-256: 64950a850277d4cda1eae7c78c698681594607b454e3b3ad746b9b58b7541144
 
 ---
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 BiosGuard/
